@@ -1,0 +1,182 @@
+body {
+	background-image: url(https://ununsplash.imgix.net/32/6Icr9fARMmTjTHqTzK8z_DSC_0123.jpg?q=75&fm=jpg&s=bd8827942e8be9220eb2d0e58844b01e);
+	background-size: cover;
+	background-position: center center;
+	font-family: Helvetica, sans-serif;
+	color: white;
+	position: relative;
+	margin: 0;  /* so that overlay covers entire page*/
+	min-height: 100vh;  /* so the background always fills the screen */
+}
+
+body.no_overflow {
+	height: 100vh; /* no vertical scrolling, full height */
+	overflow: hidden;
+}
+
+.overlay {
+	position: absolute;  /* where the overlay is placed in relation to everything else --> ignores everything else*/
+	/*where the overlay is placed*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);  /* a=alpha -> transparency*/
+	z-index: -10;  /* pulls overlay back*/
+}
+
+header .logo {
+	font-size: 3em;  /* 2.5 times the default size*/
+	padding-top: 20px;
+	margin-left: 5%;
+	font-family: "Allerta Stencil";
+	display: inline;
+}
+
+.vertical-center {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.justify-center {
+	justify-content: center;
+}
+main {
+	min-height: 60vh;  /*essentially 90% of verticle height*/
+}
+
+input {
+	background-color: rgba(255, 255, 255, 0.65); 
+	border: none;
+	border-radius: 7px;  /*rounds edges*/
+	/* for sizing the search bar */
+	min-width: 25%;  
+    min-height: 30px;
+    transition: all 0.2s ease-in;  /* targets any changed property & transition*/
+}
+
+input:focus, input:hover { /* Applies when clicked or hovered */
+	outline: none;  /* psuedo element -> removes blue outline on focus (on the text input box) */
+	background-color: rgba(255, 255, 255, 0.9);
+	min-width: 30%; 
+	min-height: 35px;
+}
+
+#searchIcon {
+	margin-left: 12px;
+	font-size: 1.4em;
+	opacity: 0.8;
+	vertical-align: middle;
+}
+
+
+.pull-right {float: right;}
+
+.container {
+	width: 90%; /* align with the header elements */
+	margin-left: auto; /* center the block */
+	margin-right: auto;
+	margin-top: 5vh;
+	height: 75vh;
+	overflow-y: scroll; /* set a specific height, and then scroll within the block, instead of having page flow down */
+ 	background-color: rgba(255,255,255,0.65);
+	border-radius: 15px;
+	color: black;
+}
+
+/* ---------------------------------------
+Artist list page ---------------------- */
+
+.menu-search {  /* alight search bar correctly */
+	margin-top: 3%;
+	margin-right: 5%;
+}
+
+.small {
+	min-height: 0;
+	height: 25px;
+}
+
+.small:hover, .small:focus {
+	min-width: 0; 
+	min-height: 0;
+
+}
+
+.search-results {
+
+	list-style: none;
+
+}
+
+/* list item alignment */
+.search-results li {  
+	margin-top: 15px;
+	color: black;
+
+}
+
+.search-results li:last-child {  /* targets last item in the list of artists */ 
+	margin-bottom: 15px;
+}
+
+.search-results li span {  
+	margin-left: 5px;
+}
+
+
+/* ----------------------------------
+Artist info page ------------------*/
+
+.artist_head {
+	padding: 20px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 1px solid black;
+}
+
+.artist_head img {
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	border: 2px solid black;
+}
+
+.artist_head h1 {
+	display: inline-block;
+	font-family: "Allerta Stencil";
+	font-weight: 200;
+	margin-left: 12px;
+}
+
+.artist_bio {
+	width: 40%;
+	margin: 0;
+	padding-left: 30px;
+	max-height: 60%;
+	overflow-y: scroll;
+	float: left;
+}
+
+.metadata {
+	width: 40%;
+	float: right;
+	padding-right: 30px;
+	padding-top: 20px;
+	max-height: 60%;
+	overflow-y: scroll;
+}
+
+#members {
+	padding-left: 15px;
+	margin-top: 0;
+}
